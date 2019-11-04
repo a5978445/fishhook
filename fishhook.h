@@ -42,8 +42,11 @@ extern "C" {
  * name to its replacement
  */
 struct rebinding {
+    // 符号名字
   const char *name;
+    //  用于替换的函数地址
   void *replacement;
+    // 被替换的函数地址，将会写入到该地址
   void **replaced;
 };
 
